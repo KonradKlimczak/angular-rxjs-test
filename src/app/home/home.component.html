@@ -1,0 +1,14 @@
+<p>home works!</p>
+Favorite Color: <input type="text" [(ngModel)]="favoriteColor" /> Favorite
+Color: <input type="text" [formControl]="favoriteColorControl" />
+<div class="button" (click)="onClick()">
+  <button mat-raised-button class="submit-button">Submit</button>
+</div>
+
+<app-user [name]="favoriteColor"></app-user>
+
+<button class="submit-button" (click)="onPlus()">Plus</button>
+<button class="submit-button" (click)="onMinus()">Minus</button>
+
+<app-light-on *ngIf="counter % 2 === 0"></app-light-on>
+<app-light-off *ngIf="counter % 2 === 1"></app-light-off>
